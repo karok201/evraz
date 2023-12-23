@@ -19,6 +19,7 @@
     </td>
     @foreach($wagonsToData as $wagonToData)
         <td id="item-2.{{ $wagonToData->wagon_id }}" data-id="2.{{ $wagonToData->wagon_id }}">
+            asdasd
             <img
                 src="/img/icons/wagons/{{ $wagonToData->wagon->type->name }}.svg"
                 alt="{{ $wagonToData->wagon->type->name }}"
