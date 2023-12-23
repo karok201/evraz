@@ -1,0 +1,8 @@
+.draggable {
+  cursor: pointer;
+  width: 74px;
+  height: 40px;
+  margin: 0; 
+  padding: 0;
+}
+

@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
+ * @deprecated
+ *
  * @var int $id
  * @var int $station_id
- * @var int $wagon_id
  * @var int $idle_days_length
  * @var string $state
  * @var string $cargo
  * @var int $position
  *
  * @var Station $station
- * @var Wagon $wagon
  * @var Way $way
  * @var Park $park
  */
@@ -40,7 +40,6 @@ class WagonToStation extends Model
     protected $fillable = [
         self::FIELD_ID,
         self::FIELD_STATION_ID,
-        self::FIELD_WAGON_ID,
         self::FIELD_IDLE_DAYS_LENGTH,
         self::FIELD_STATE,
         self::FIELD_CARGO,
@@ -55,16 +54,6 @@ class WagonToStation extends Model
     public function station(): BelongsTo
     {
         return $this->belongsTo(Station::class, self::FIELD_STATION_ID, Station::FIELD_ID);
-    }
-
-    /**
-     * Get Wagon
-     *
-     * @return BelongsTo
-     */
-    public function wagon(): BelongsTo
-    {
-        return $this->belongsTo(Wagon::class, self::FIELD_WAGON_ID, Wagon::FIELD_ID);
     }
 
     /**

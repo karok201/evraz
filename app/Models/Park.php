@@ -5,6 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @var int $id
+ * @var string $name
+ */
 class Park extends Model
 {
     use HasFactory;

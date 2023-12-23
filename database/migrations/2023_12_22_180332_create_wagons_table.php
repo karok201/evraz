@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer(Wagon::FIELD_DAYS_TO_REPAIR)->comment('Wagon Days to Repair');
             $table->integer(Wagon::FIELD_KILOMETERS_LEFT)->comment('Wagon Kilometers left');
             $table->boolean(Wagon::FIELD_IS_DIRTY)->comment('Is Wagon dirty');
-            $table->string(Wagon::FIELD_FIRST_NOTE)->comment('First Wagon Note');
-            $table->string(Wagon::FIELD_SECOND_NOTE)->comment('Second Wagon Note');
+            $table->string(Wagon::FIELD_FIRST_NOTE)->nullable()->comment('First Wagon Note');
+            $table->string(Wagon::FIELD_SECOND_NOTE)->nullable()->comment('Second Wagon Note');
 
             $table->timestamps();
 
