@@ -8,7 +8,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 class KeycloakController extends Controller
 {
-    protected const FIELD_USER_ROLES = 'roles';
+    protected const FIELD_USER_ROLES  = 'roles';
+    protected const FIELD_GIVEN_NAME  = 'given_name';
+    protected const FIELD_FAMILY_NAME = 'family_name';
 
     public function login()
     {
@@ -25,6 +27,8 @@ class KeycloakController extends Controller
             User::FIELD_EMAIL => $user->getEmail()
         ], [
             User::FIELD_USERNAME => $user->getNickname(),
+            User::FIELD_FIRSTNAME => $user->user[self::FIELD_GIVEN_NAME] ?? '',
+            User::FIELD_LASTNAME => $user->user[self::FIELD_FAMILY_NAME] ?? ''
         ]);
 
         Auth::login($localUser);

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @var int $id
+ * @property int $id
  */
 class Locomotive extends Model
 {

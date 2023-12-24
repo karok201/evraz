@@ -11,23 +11,23 @@ use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
 /**
- * @var int $id
- * @var string $username
- * @var string $firstname
- * @var string $lastname
- * @var string $email
- * @var string $password
- * @var string $address
- * @var string $city
- * @var string $country
- * @var string $postal
- * @var string $about
- * @var string $remember_token
- * @var string $email_verified_at
- * @var bool $is_admin
- * @var int $station_id
+ * @property int $id
+ * @property string $username
+ * @property string $firstname
+ * @property string $lastname
+ * @property string $email
+ * @property string $password
+ * @property string $address
+ * @property string $city
+ * @property string $country
+ * @property string $postal
+ * @property string $about
+ * @property string $remember_token
+ * @property string $email_verified_at
+ * @property bool $is_admin
+ * @property int $station_id
  *
- * @var Station $station
+ * @property Station $station
  */
 class User extends Authenticatable
 {

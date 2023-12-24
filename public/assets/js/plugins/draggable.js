@@ -6,13 +6,15 @@ $('#sortable-items').sortable({
     onSort: reportActivity
 });
 
-function reportActivity() {
-    console.log('The sort order has changed');
+function reportActivity(e) {
+    console.log(e);
 }
 
-$('#items-2').sortable({
+$('[id^="items_"]').sortable({
     group: 'list',
     animation: 200,
+    multiDrag: true,
+    selectedClass: "selected",
     ghostClass: 'ghost',
     onSort: reportActivity,
 });

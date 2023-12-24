@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Password;
 
-class LoginController extends Controller
+class   LoginController extends Controller
 {
     /**
      * Display login page.

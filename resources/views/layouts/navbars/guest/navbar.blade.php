@@ -5,7 +5,7 @@
             <nav
                 class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
                 <div class="container-fluid">
-                    <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="{{ route('home') }}">
+                    <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="{{ route('welcome') }}">
                         <img src="/img/logos/evraz.svg" alt="Evraz" height="25">
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
@@ -17,16 +17,6 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navigation">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link me-2" href="{{ route('login') }}">
-                                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
-                                    Вход
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
             <!-- End Navbar -->

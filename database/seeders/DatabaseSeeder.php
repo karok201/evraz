@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             WagonTypeSeeder::class,
             OwnerSeeder::class,
             StationDataSeeder::class,
+            ReasonSeeder::class,
+            OperationTypeSeeder::class
         ]);
 
         DB::table(User::TABLE_NAME)->insert([

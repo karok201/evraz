@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @var int $id
- * @var string $name
+ * @property int $id
+ * @property string $name
  */
 class Park extends Model
 {

@@ -18,7 +18,7 @@ class WayFactory extends Factory
     public function definition(): array
     {
         return [
-            Way::FIELD_NAME => $this->faker->locale()
+            Way::FIELD_NAME => strtoupper($this->faker->randomLetter()) . random_int(1, 20)
         ];
     }
 }

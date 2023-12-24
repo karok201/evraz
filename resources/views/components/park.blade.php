@@ -7,20 +7,14 @@
 @endphp
 
 <div class="row mt-4">
-    <div class="col-lg-7 mb-lg-0 mb-4">
+    <div class="col-lg-8 mb-lg-0 mb-4 pb-4">
         <div class="card z-index-2 h-100">
-            <div class="card-header pb-0 pt-3 bg-transparent">
-                <h4 class="text-capitalize">Парк "{{ Park::find($parkId)->name }}"</h4>
+            <div class="card-header pb-3 pt-3 bg-transparent">
+                <h4 class="text-capitalize">Парк {{ Park::find($parkId)->name }}</h4>
             </div>
-            <div class="table-responsive">
-                <table class="table align-items-center">
-                    <tbody>
-                        @foreach($wagonsByWays as $wayId => $wagonsToData)
-                            @include('components.way', ['wayId' => $wayId, 'wagonsToData' => $wagonsToData])
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+            @foreach($wagonsByWays as $wayId => $wagonsToData)
+                @include('components.way_grid', ['wayId' => $wayId, 'wagonsToData' => $wagonsToData])
+            @endforeach
         </div>
     </div>
 </div>

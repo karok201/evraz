@@ -9,16 +9,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @deprecated
  *
- * @var int $id
- * @var int $station_id
- * @var int $idle_days_length
- * @var string $state
- * @var string $cargo
- * @var int $position
+ * @property int $id
+ * @property int $station_id
+ * @property int $idle_days_length
+ * @property string $state
+ * @property string $cargo
+ * @property int $position
  *
- * @var Station $station
- * @var Way $way
- * @var Park $park
+ * @property Station $station
+ * @property Way $way
+ * @property Park $park
  */
 class WagonToStation extends Model
 {
