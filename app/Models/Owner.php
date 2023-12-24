@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @var int $id
- * @var int $name
+ * @property int $id
+ * @property int $name
+ * @property string $color
  */
 class Owner extends Model
 {
@@ -16,8 +17,9 @@ class Owner extends Model
 
     public const TABLE_NAME = 'owners';
 
-    public const FIELD_ID = 'id';
-    public const FIELD_NAME = 'name';
+    public const FIELD_ID    = 'id';
+    public const FIELD_NAME  = 'name';
+    public const FIELD_COLOR = 'color';
 
     protected $table = self::TABLE_NAME;
     protected $fillable = [

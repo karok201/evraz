@@ -7,20 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * @var int $id
- * @var string $name
- * @var bool $is_sick
- * @var int $owner_id
- * @var bool $is_with_hatch
- * @var float $load_capacity
- * @var int $days_to_repair
- * @var int $kilometers_left
- * @var bool $is_dirty
- * @var string $first_note
- * @var string $second_note
+ * @property int $id
+ * @property string $name
+ * @property bool $is_sick
+ * @property int $owner_id
+ * @property bool $is_with_hatch
+ * @property float $load_capacity
+ * @property int $days_to_repair
+ * @property int $kilometers_left
+ * @property bool $is_dirty
+ * @property string $first_note
+ * @property string $second_note
  *
- * @var Owner $owner
- * @var WagonType $type
+ * @property Owner $owner
+ * @property WagonType $type
  */
 class Wagon extends Model
 {

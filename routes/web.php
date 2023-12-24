@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KeycloakController;
+use App\Http\Controllers\XmlController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -21,13 +22,14 @@ use App\Http\Controllers\UserProfileController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home')->middleware('auth');
-
+Route::get('/opreations', [HomeController::class, 'operations'])->name('operations')->middleware('auth');
+Route::get('/analytics', [HomeController::class, 'analytics'])->name('analytics');
+Route::get('/station/xml', [XmlController::class, 'getStationXml'])->name('station.xml');
 Route::get('/login', [KeycloakController::class, 'login'])->name('login');
 Route::get('/callback', [KeycloakController::class, 'callback'])->name('callback');
 

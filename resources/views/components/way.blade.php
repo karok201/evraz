@@ -18,20 +18,15 @@
         </div>
     </td>
     @foreach($wagonsToData as $wagonToData)
-        <td id="item-2.{{ $wagonToData->wagon_id }}" data-id="2.{{ $wagonToData->wagon_id }}">
-            asdasd
-            <img
-                src="/img/icons/wagons/{{ $wagonToData->wagon->type->name }}.svg"
-                alt="{{ $wagonToData->wagon->type->name }}"
-                height="25"
-            >
+        <td id="item-2.{{ $wagonToData->wagon_id }}" data-id="2.{{ $wagonToData->wagon_id }}" class="text-center">
+            <div>
+                <span>{{ $wagonToData->position }}</span>
+                <img
+                    src="/img/icons/wagons/{{ $wagonToData->wagon->type->name }}.svg"
+                    alt="{{ $wagonToData->wagon->type->name }}"
+                    height="25"
+                >
+            </div>
         </td>
     @endforeach
-{{--    <div id="items-2" class="list-group col">--}}
-{{--        <div id="item-2.1" data-id="2.1" class="list-group-item nested-1">Item 2.1</div>--}}
-{{--        <div id="item-2.2" data-id="2.2" class="list-group-item nested-1">Item 2.2</div>--}}
-{{--        <div id="item-2.3" data-id="2.3" class="list-group-item nested-1">Item 2.3</div>--}}
-{{--        <div id="item-2.4" data-id="2.4" class="list-group-item nested-1">Item 2.4</div>--}}
-{{--        <div id="item-2.5" data-id="2.5" class="list-group-item nested-1">Item 2.5</div>--}}
-{{--    </div>--}}
 </tr>
